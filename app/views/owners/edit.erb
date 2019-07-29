@@ -3,7 +3,8 @@
   <form action="/owners/<%= @owner.id %>" method="POST">
     <label>Name:</label>
     <br>
-    <input id="hidden" type="hidden" name="owner[name]" value="patch">
+    <input id="hidden" type="hidden" name="-name" value="patch">
+    <input type="text" name="owner[name]">
     <br>
 
     <label>Update an existing pet:</label>
