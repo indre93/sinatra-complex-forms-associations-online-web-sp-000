@@ -32,6 +32,7 @@ class PetsController < ApplicationController
     binding.pry
     @pet = Pet.find(params[:id])
     @pet.update(params["pet"])
+    @pet.owner = Owner.create(name: params["owner"]["name"])
     redirect to "pets/#{@pet.id}"
   end
 end
