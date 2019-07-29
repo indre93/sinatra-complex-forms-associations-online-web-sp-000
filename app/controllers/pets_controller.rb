@@ -30,6 +30,7 @@ class PetsController < ApplicationController
 
   patch '/pets/:id' do
     binding.pry
+
     @pet = Pet.find(params[:id])
     @pet.update(params["pet"])
     @pet.owner == Owner.create(name: params["owner"]["name"])
