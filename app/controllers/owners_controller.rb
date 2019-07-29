@@ -28,7 +28,7 @@ class OwnersController < ApplicationController
     erb :'/owners/show'
   end
 
-  pacth '/owners/:id' do
+  patchh '/owners/:id' do
     @owner = Owner.find(params[:id])
     @owner.update(params["owner"])
     if !params["pet"]["name"].empty?
