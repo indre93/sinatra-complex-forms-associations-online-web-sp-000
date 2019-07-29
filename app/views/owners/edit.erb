@@ -2,11 +2,15 @@
 
 <h2>Edits for <%= @owner.name %></h2>
 
-  <form action="/owners/<%= @owner.id %>" method="POST"><br>
+  <form action="/owners/<%= @owner.id %>" method="POST">
+
+    <br>
 
     <input id="hidden" type="hidden" name="_name" value="PATCH">
     <label>Edit the Owner's Name:</label>
-    <input type="text" name="owner[name]" value="<%= @owner.name %>"><br>
+    <input type="text" name="owner[name]" value="<%= @owner.name %>">
+
+    <br>
 
     <h3>Existing Pets: </h3>
 
@@ -18,6 +22,7 @@
 
     <label>Pet Name: </label>
     <input type="text" name="pet[name]" id="pet_name"></input>
+
     <br><br>
 
     <input type="submit" value="Update Owner">
