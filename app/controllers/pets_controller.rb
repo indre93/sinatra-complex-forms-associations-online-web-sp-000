@@ -30,6 +30,7 @@ class PetsController < ApplicationController
   end
 
   patch '/pets/:id' do
+    @owner = Owner.find(params[:id])
 
     redirect to "pets/#{@pet.id}"
   end
